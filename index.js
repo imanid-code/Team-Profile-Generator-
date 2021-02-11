@@ -102,13 +102,13 @@ function promptUser(){
             
                 const newEngineer = new Engineer (response.engineername, response.engineerID, response.engineer-email, response.engineer-github);
                 listofEmployee.push(newEngineer);
-                createNewEmployee();
+                
         }
         
         else if (response.role === "Intern"){
             const newIntern = new Intern (response.internname, response.internID, response.interemail, response.internschool);
             listofEmployee.push(newIntern);
-            createNewEmployee();
+            
         }
         createNewEmployee();
 
@@ -128,7 +128,7 @@ function promptUser(){
              }
              else{
                  const html = render(listofEmployee);
-                 fs.writeFile(outputPath, html, function (err){
+                 fs.writeFile('team.html' , listofEmployee  , function (err){
 
                  
                  }); if (err) throw err;
