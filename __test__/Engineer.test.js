@@ -1,6 +1,7 @@
+const Employee = require("../lib/Employee");
 const Engineer = require("../lib/Engineer");
 
-decribe("Engineer", () =>{
+describe("Engineer", () =>{
 
     describe("getGithub", () => {
 
