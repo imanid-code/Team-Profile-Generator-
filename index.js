@@ -12,6 +12,10 @@ const Intern = require("./lib/Intern")
 
 const render = require("./dist/renderhtml");
 
+const output_dir = path.resolve(__dirname, "output");
+
+const outputPath = path.join(output_dir, "team.html");
+
 const listofEmployee = [];
 
 const managerquestions = [
@@ -43,7 +47,7 @@ const engineerquestions = [
     {
         type: "input",
         message: "Please enter engineer name: ",
-        name: "engineerename"
+        name: "engineername"
     },
     {
         type: "input",
@@ -92,9 +96,9 @@ function welcome() {
 
 function promptUser() {
     //inquirr.prompt auto takes in questions and prompt user -
-    return inquirer.prompt(managerquestions).then(function (response) {
+    return inquirer.prompt(managerquestions).then(function(response){
 
-        if (response.managername === true) {
+        if (response.managername) {
             const newManager = new Manager(response.managername, response.managerID, response.manageremail, response.managernumber);
             listofEmployee.push(newManager);
         }
@@ -153,7 +157,7 @@ function promptUser() {
             else {
                 console.log(listofEmployee)
                 const html = render(listofEmployee);
-                fs.writeFile("team.html", html,
+                fs.writeFile(outputPath, html,
                  function (err) {
 
                     if (err) throw err;

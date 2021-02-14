@@ -8,14 +8,14 @@
     <title>My Team</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
 </head>
 <body>
     
     <div class="container-header">
         <div class = "row">
-            <div class="col-12 jumbotron heading">
+            <div class="col-12 jumbotron heading" style="background-color: red;">
                 <h1 class="header" style="text-align: center; color: white;">My Team</h1>
             </div>
         </div>
@@ -24,57 +24,13 @@
     <div class="container">
         <div class="row">
             <div class="team-area col-12 d-flex justify-content-center">
-             
+             {{ team }}
             </div>
         </div>
     </div>
 
 
-<div class="card employee" style="width: 18rem;">
-    <div class="card-header" id="header1">
-        <h2 class="card-title">{{ name }}</h2>
-        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ role }} </h3>
-    </div>
-    <div class="card-body" id="body1">
-        <ul class="list-group">
-            <li class="list-group-item">ID: {{ id }}</li>
-     <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a> </li>
-     <li class="list-group-item">Office Number: {{ officeNumber }} </li>  
-        </ul>
-    </div>
-</div>
 
-<div class="card employee" style="width: 18rem;">
-    <div class="card-header" id="header2">
-    <h2 class= "card-title">{{ name }}</h2>
-    <h3 class= "card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3>
-</div>
-       <div class="card-body" id="body2">
-           <ul class="list-group">
-           <li class="list-group-item">ID: {{ id }}</li>
-           <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a> </li>
-           <li class="list-group-item">Github: <a href="https://github/{{ github }}" target="_blank" >{{ github }}</a></li>
-       
-           </ul>
-
-   </div>
-</div>
-
-<div class="card employee" style="width: 18rem;">
-    <div class="card-header" id="header2">
-    <h2 class= "card-title">{{ name }}</h2>
-    <h3 class= "card-title"><i class="fas fa-user-graduate"></i> {{ role }}</h3>
-</div>
-       <div class="card-body" id="body2">
-           <ul class="list-group">
-           <li class="list-group-item">ID: {{ id }} </li>
-           <li class="list-group-item">Email: <a href="mailto: {{ email }}">BrunoMars@gmail.com</a> </li>
-           <li class="list-group-item">School: {{ internschool }} </li>
-       
-           </ul>
-
-   </div>
-</div>
 
 </body>
 
