@@ -10,7 +10,7 @@ const Engineer = require("./lib/Engineer");
 
 const Intern = require("./lib/Intern")
 
-const render = require("./dist/renderhtml");
+const render = require("./lib/renderhtml");
 
 const output_dir = path.resolve(__dirname, "output");
 
